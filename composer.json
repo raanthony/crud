@@ -1,0 +1,21 @@
+{
+    "name":    "idb/crud-generator",
+    "version": "1.0.0",
+    "type":    "library",
+    "license": "MIT",
+    "description": "CRUD generator for Laravel",
+    "authors": [
+        {
+            "name": "Raanthony",
+            "email": "idb@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "idb/crud-generator": "^1.1",
+    },
+    "autoload": {
+        "psr-4": {"Nvd\\Crud\\": ["src"]}
+    },
+    "require-dev": {}
+}

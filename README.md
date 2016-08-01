@@ -33,14 +33,14 @@ CRUD generator for Laravel 5.x
 ## Installation
 
 1. Download:
-    - Run `composer require IDB/crud-generator` from the project directory
+    - Run `composer require Idb/crud-generator` from the project directory
 2. Register the Service Provider in `config/app.php`:
     
     ```
     'providers' => [
         ...
         ...
-        IDB\Crud\Providers\IDBCrudServiceProvider::class,
+        Idb\Crud\Providers\IDBCrudServiceProvider::class,
     ],
     ```
     
@@ -52,7 +52,7 @@ CRUD generator for Laravel 5.x
 
 ### Generating CRUD for a Specific Table
 
-Run `php artisan IDB:crud table_name`
+Run `php artisan idb:crud table_name --model-dir=[your-model-path] --route-base=[route-base] --translatable-fields=[field1,field2]`
 
 Now you can access http://your-site.com/table-name to access the CRUD app. (Here `table-name` refers to the *singular, slugged* version of the table name. e.g.
 

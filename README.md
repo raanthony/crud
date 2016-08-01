@@ -1,18 +1,18 @@
-# NVD CRUD Generator
+# IDB CRUD Generator
 
 CRUD generator for Laravel 5.x
 - [Screenshots](#screenshots)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Customizing NVD CRUD Generator](#customizing-nvd-crud-generator)
+- [Customizing IDB CRUD Generator](#customizing-IDB-crud-generator)
 - [Known Problems and Their Solutions](#known-problems-and-their-solutions)
 
 ## Screenshots
 
-![index](https://github.com/engrnvd/laravel-crud-generator-docs/blob/master/images/index.png)
-![command](https://github.com/engrnvd/laravel-crud-generator-docs/blob/master/images/command.png)
-![edit](https://github.com/engrnvd/laravel-crud-generator-docs/blob/master/images/edit.png)
+![index](https://github.com/engrIDB/laravel-crud-generator-docs/blob/master/images/index.png)
+![command](https://github.com/engrIDB/laravel-crud-generator-docs/blob/master/images/command.png)
+![edit](https://github.com/engrIDB/laravel-crud-generator-docs/blob/master/images/edit.png)
 
 ## Features
 - Single page CRUD operations
@@ -33,14 +33,14 @@ CRUD generator for Laravel 5.x
 ## Installation
 
 1. Download:
-    - Run `composer require nvd/crud-generator` from the project directory
+    - Run `composer require IDB/crud-generator` from the project directory
 2. Register the Service Provider in `config/app.php`:
     
     ```
     'providers' => [
         ...
         ...
-        Nvd\Crud\Providers\NvdCrudServiceProvider::class,
+        IDB\Crud\Providers\IDBCrudServiceProvider::class,
     ],
     ```
     
@@ -52,7 +52,7 @@ CRUD generator for Laravel 5.x
 
 ### Generating CRUD for a Specific Table
 
-Run `php artisan nvd:crud table_name`
+Run `php artisan IDB:crud table_name`
 
 Now you can access http://your-site.com/table-name to access the CRUD app. (Here `table-name` refers to the *singular, slugged* version of the table name. e.g.
 
@@ -60,11 +60,11 @@ Now you can access http://your-site.com/table-name to access the CRUD app. (Here
 - Url for the table *user_profiles* will be http://your-site.com/user-profile
 - Url for the table *people* will be http://your-site.com/person
 
-## Customizing NVD CRUD Generator
+## Customizing IDB CRUD Generator
 
 ### Configuration File
 
-NVD CRUD generator publishes a configuration file `config/crud.php`. You can modify the default settings of the package here. The file is completely documented and hence self explanatory.
+IDB CRUD generator publishes a configuration file `config/crud.php`. You can modify the default settings of the package here. The file is completely documented and hence self explanatory.
 
 ### Templates
 
@@ -108,11 +108,11 @@ In case you don't like the default code that is generated for you, the templates
     
     If, for some reasons, the routes are generated outside the closure, you should move them inside to avoid any exception while creating, editing or deleting a resource. 
     
-- You can also tell the generator explicitly where to declare the routes by adding a comment: 'nvd-crud routes go here' and the generator will place the route declaration just after the comment.
+- You can also tell the generator explicitly where to declare the routes by adding a comment: 'IDB-crud routes go here' and the generator will place the route declaration just after the comment.
 
     ```
     Route::group(['middleware' => ['web']], function () {
-        // nvd-crud routes go here
+        // IDB-crud routes go here
     });
     ```
     
@@ -132,7 +132,7 @@ In case you don't like the default code that is generated for you, the templates
 
 ### Primary Keys Other Than 'id' 
 
-- At the moment NVD CRUD generator accepts only 'id' column as the primary key. Having a primary key other than 'id' will be supported in upcoming versions. But right now, you have to follow the convention.
+- At the moment IDB CRUD generator accepts only 'id' column as the primary key. Having a primary key other than 'id' will be supported in upcoming versions. But right now, you have to follow the convention.
 
 ### Laravel Eloquent Conventions
 
